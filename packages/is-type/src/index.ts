@@ -1,0 +1,16 @@
+export { isBigInt } from './lib/is-big-int';
+export { isBoolean } from './lib/is-boolean';
+export { isDate } from './lib/is-date';
+export { isError } from './lib/is-error';
+export { isFunction } from './lib/is-function';
+export { isNull } from './lib/is-null';
+export { isNumber } from './lib/is-number';
+export { isRegExp } from './lib/is-reg-exp';
+export { isString } from './lib/is-string';
+export { isSymbol } from './lib/is-symbol';
+export { isTypesKeys, isType } from './lib/is-type';
+export { isUndefined } from './lib/is-undefined';
+export { notNil } from './lib/not-nil';
+export type { UnknownFunction } from './lib/is-function';
+export type { IsTypeKey, IsTypeKeyType } from './lib/is-type';
+export type { IsTypes } from './lib/is-types.d';
