@@ -1,10 +1,10 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "prettier", "eslint-plugin-tsdoc"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "files": ["*.ts", "*.js"],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
@@ -22,19 +22,33 @@
       }
     },
     {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "files": ["*.ts"],
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "tsdoc/syntax": "warn"
+      },
+      "env": {
+        "node": true
+      }
     },
     {
-      "files": ["*.js", "*.jsx"],
+      "files": ["*.js"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
     },
     {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "extends": [
+        "plugin:@nrwl/nx/typescript",
+        "plugin:jest/recommended",
+        "plugin:prettier/recommended"
+      ],
+      "files": ["*.spec.ts"],
       "env": {
-        "jest": true
+        "jest": true,
+        "node": true
       },
       "rules": {}
     }

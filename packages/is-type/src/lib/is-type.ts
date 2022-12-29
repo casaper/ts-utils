@@ -21,7 +21,7 @@ export const isTypesKeys = [
   'string',
   'undefined',
   'null',
-  'symbol'
+  'symbol',
 ] as const;
 export type IsTypeKey = typeof isTypesKeys[number];
 

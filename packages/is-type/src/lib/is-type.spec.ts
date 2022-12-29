@@ -13,7 +13,7 @@ const isTypeKeysValidSubjects = {
   string: 'abc',
   undefined: undefined,
   null: null,
-  symbol: Symbol('testsymbol')
+  symbol: Symbol('testsymbol'),
 } as const;
 
 let subjectVar:
@@ -41,7 +41,6 @@ let itIsSymbol: symbol;
 let itIsSubjectFn: UnknownFunction;
 
 describe('isType()', () => {
-  // eslint-disable-next-line sonarjs/cognitive-complexity
   describe('type inference', () => {
     it('should infer for boolean', () => {
       if (isType(subjectVar, 'boolean')) {

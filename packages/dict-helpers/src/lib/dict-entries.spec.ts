@@ -13,7 +13,7 @@ describe('dictEntries()', () => {
       Object.entries(readonlySubject);
     expect(notRoSubjEntries).toEqual([
       ['a', 1],
-      ['b', 2]
+      ['b', 2],
     ]);
 
     // @ts-expect-no-error
@@ -21,7 +21,7 @@ describe('dictEntries()', () => {
       dictEntries(readonlySubject);
     expect(isRoSubjEntries).toEqual([
       ['a', 1],
-      ['b', 2]
+      ['b', 2],
     ]);
   });
 
@@ -30,14 +30,14 @@ describe('dictEntries()', () => {
     const notWritableSubjEntries: ['c' | 'd', number][] = Object.entries(writableSubject);
     expect(notWritableSubjEntries).toEqual([
       ['c', 1],
-      ['d', 2]
+      ['d', 2],
     ]);
 
     // @ts-expect-no-error
     const isWritableSubjectEntries: ['c' | 'd', number][] = dictEntries(writableSubject);
     expect(isWritableSubjectEntries).toEqual([
       ['c', 1],
-      ['d', 2]
+      ['d', 2],
     ]);
   });
 });
