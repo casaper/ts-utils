@@ -1,11 +1,11 @@
-# is-type
+# is-type utilities
 
-This library was generated with [Nx](https://nx.dev).
+## Development
 
-## Running unit tests
+### Running unit tests
 
 Run `nx test is-type` to execute the unit tests via [Jest](https://jestjs.io).
 
-## Running lint
+### Running lint
 
 Run `nx lint is-type` to execute the lint via [ESLint](https://eslint.org/).

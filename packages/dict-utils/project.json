@@ -1,32 +1,32 @@
 {
-  "name": "dict-helpers",
+  "name": "dict-utils",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/dict-helpers/src",
+  "sourceRoot": "packages/dict-utils/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/dict-helpers",
-        "tsConfig": "packages/dict-helpers/tsconfig.lib.json",
-        "packageJson": "packages/dict-helpers/package.json",
-        "main": "packages/dict-helpers/src/index.ts",
-        "assets": ["packages/dict-helpers/*.md"]
+        "outputPath": "dist/packages/dict-utils",
+        "tsConfig": "packages/dict-utils/tsconfig.lib.json",
+        "packageJson": "packages/dict-utils/package.json",
+        "main": "packages/dict-utils/src/index.ts",
+        "assets": ["packages/dict-utils/*.md"]
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/dict-helpers/**/*.ts"]
+        "lintFilePatterns": ["packages/dict-utils/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "packages/dict-helpers/jest.config.ts",
+        "jestConfig": "packages/dict-utils/jest.config.ts",
         "passWithNoTests": true
       }
     }

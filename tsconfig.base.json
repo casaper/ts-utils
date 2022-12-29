@@ -18,7 +18,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@casaper/dict-helpers": ["packages/dict-helpers/src/index.ts"],
+      "@casaper/dict-utils": ["packages/dict-utils/src/index.ts"],
       "@casaper/is-type": ["packages/is-type/src/index.ts"]
     }
   },
