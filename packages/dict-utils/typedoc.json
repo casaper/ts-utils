@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src/index.ts"],
+  "out": "./doc",
+  "tsconfig": "./tsconfig.lib.json",
+  "exclude": ["./src/**/*.spec.ts"],
+  "name": "dict-utils - Dictionary like object utilities for TypeScript",
+  "gitRemote": "origin"
+}

@@ -1,10 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { isNull } from './is-null';
-import { IsTypes } from './is-types';
 
 describe('isNull()', () => {
   it('isNull infers for unknown', () => {
-    let subject: IsTypes;
+    let subject:
+      | undefined
+      | null
+      | string
+      | number
+      | boolean
+      | Date
+      | RegExp
+      | Error
+      | bigint
+      | symbol;
     let itIsUndefined: undefined;
     let itIsNull: null;
     let itIsString: string;

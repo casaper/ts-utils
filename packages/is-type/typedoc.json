@@ -1,0 +1,9 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src/index.ts"],
+  "out": "./doc",
+  "exclude": ["./src/**/*.spec.ts"],
+  "tsconfig": "./tsconfig.lib.json",
+  "name": "is-type - TypeScript aware type testing functions",
+  "gitRemote": "origin"
+}

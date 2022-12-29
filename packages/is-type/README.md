@@ -1,4 +1,4 @@
-# is-type utilities
+# is-type - TypeScript aware type testing functions
 
 ## Development
 

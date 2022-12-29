@@ -1,6 +1,21 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { UnknownFunction } from './is-function';
-import { isType, isTypesKeys } from './is-type';
+import { isType } from './is-type';
+import { IsTypeKey } from './is-type-key';
+import { UnknownFunction } from './unknown-function';
+
+const isTypesKeys: readonly IsTypeKey[] = [
+  'bigint',
+  'boolean',
+  'Date',
+  'Error',
+  'Function',
+  'number',
+  'RegExp',
+  'string',
+  'undefined',
+  'null',
+  'symbol',
+] as const;
 
 const isTypeKeysValidSubjects = {
   bigint: BigInt(10),

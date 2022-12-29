@@ -1,10 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { isBoolean } from './is-boolean';
-import { IsTypes } from './is-types';
 
 describe('isBoolean()', () => {
   it('isBoolean infers TypeScript type', () => {
-    let subject: IsTypes;
+    let subject:
+      | undefined
+      | null
+      | string
+      | number
+      | boolean
+      | Date
+      | RegExp
+      | Error
+      | bigint
+      | symbol;
     let itIsUndefined: undefined;
     let itIsNull: null;
     let itIsString: string;

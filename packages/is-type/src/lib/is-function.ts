@@ -1,10 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-declare function janeDoeFunction(...args: any[]): any;
-declare function janeDoeFunction(): any;
-export type UnknownFunction = typeof janeDoeFunction;
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type AnyFunction = (...args: any[]) => any;
+import { AnyFunction } from './any-function';
 
 /**
  * Checks if value is classified as a Function object.

@@ -2,52 +2,15 @@ import { isBigInt } from './is-big-int';
 import { isBoolean } from './is-boolean';
 import { isDate } from './is-date';
 import { isError } from './is-error';
-import { isFunction, UnknownFunction } from './is-function';
+import { isFunction } from './is-function';
 import { isNumber } from './is-number';
 import { isRegExp } from './is-reg-exp';
 import { isString } from './is-string';
 import { isUndefined } from './is-undefined';
 import { isNull } from './is-null';
 import { isSymbol } from './is-symbol';
-
-export const isTypesKeys = [
-  'bigint',
-  'boolean',
-  'Date',
-  'Error',
-  'Function',
-  'number',
-  'RegExp',
-  'string',
-  'undefined',
-  'null',
-  'symbol',
-] as const;
-export type IsTypeKey = typeof isTypesKeys[number];
-
-export type IsTypeKeyType<TKey extends IsTypeKey> = TKey extends 'bigint'
-  ? bigint
-  : TKey extends 'boolean'
-  ? boolean
-  : TKey extends 'Date'
-  ? Date
-  : TKey extends 'Error'
-  ? Error
-  : TKey extends 'Function'
-  ? UnknownFunction
-  : TKey extends 'number'
-  ? number
-  : TKey extends 'RegExp'
-  ? RegExp
-  : TKey extends 'string'
-  ? string
-  : TKey extends 'undefined'
-  ? undefined
-  : TKey extends 'null'
-  ? null
-  : TKey extends 'symbol'
-  ? symbol
-  : never;
+import { IsTypeKey } from './is-type-key';
+import { IsTypeKeyType } from './is-type-key-type';
 
 /**
  * TypeScript aware type checking

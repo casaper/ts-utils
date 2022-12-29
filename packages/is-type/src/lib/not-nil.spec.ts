@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { IsTypes } from './is-types';
 import { notNil } from './not-nil';
 
 describe('notNil()', () => {
@@ -24,7 +23,17 @@ describe('notNil()', () => {
   });
 
   it('infers type', () => {
-    let subject: IsTypes;
+    let subject:
+      | undefined
+      | null
+      | string
+      | number
+      | boolean
+      | Date
+      | RegExp
+      | Error
+      | bigint
+      | symbol;
     let itIsUndefined: undefined;
     let itIsNull: null;
     let itIsString: string;

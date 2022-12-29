@@ -1,12 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { isFunction } from './is-function';
-import { IsTypes } from './is-types';
 
 type SubjectType = (a: string) => boolean;
 
 describe('isFunction()', () => {
   it('isFunction infers TypeScript type', () => {
-    let subject: SubjectType | IsTypes;
+    let subject:
+      | undefined
+      | null
+      | string
+      | number
+      | boolean
+      | Date
+      | RegExp
+      | Error
+      | bigint
+      | symbol
+      | SubjectType;
     let itIsSubjectFn: SubjectType;
     let itIsUndefined: undefined;
     let itIsNull: null;

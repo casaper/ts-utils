@@ -29,7 +29,15 @@
         "jestConfig": "packages/is-type/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "doc": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "typedoc --options packages/is-type/typedoc.json",
+        "cwd": "./",
+        "color": true
+      }
     }
   },
-  "tags": []
+  "tags": ["type:util"]
 }
